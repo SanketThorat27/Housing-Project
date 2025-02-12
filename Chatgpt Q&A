@@ -1,0 +1,67 @@
+# github Q&A
+
+date - 12/02/2025
+
+You said:
+See, i along with my friend want do a project - Housing Prices(it is a prototype name, you can later suggest better names as per requirement), in this project we have decided one objective(you can also add more after i ask you), this objective is - It will compare the Housing prices of any particular area around the world and also provide the price in multiple currencies.
+
+ChatGPT said:
+ChatGPT
+Noted.
+
+You said:
+so my friend will majorly work on web dev part using mern stack and i will simultaneously work on web dev + mobile app for the same
+ChatGPT said:
+ChatGPT
+Understood.
+
+You said:
+but our main moto is to integrate an ML model with this project that can judge the prices of the housing in that area after the user selects the input region/area and also provide the desired result
+ChatGPT said:
+ChatGPT
+Noted.
+
+You said:
+so now you can start answering by your side, also tell me -
+1.what more additions can we do to this project to make it better and more real world oriented
+2.tell me the tech stack for both web dev and mobile app that will best integrate seamlessly with ML model as we both dont have much idea about ML model training, but the model sould be top knotch
+3.we will use github for version control so also suggest idea such that we can integrate the web dev and mobile app properly as we both will work on diff laptop and from diff location but the final project shall be perfect
+
+ChatGPT said:
+ChatGPT
+Memory updated
+1. Enhancements for Real-World Use:
+Historical Price Trends: Show price fluctuations over time.
+Price Prediction Factors: Display key factors influencing price (e.g., crime rate, schools, amenities).
+User Input Data: Allow users to add/update housing prices for real-time insights.
+Visualization: Interactive maps and charts for better understanding.
+APIs for Real Data: Use real estate APIs (Zillow, Realtor, etc.) for actual pricing data.
+AI Chatbot: Help users get price estimates quickly via chat.
+
+2. Tech Stack (ML Integration-Friendly):
+Web Development (MERN Stack + ML Integration):
+Frontend: React.js (for dynamic UI)
+Backend: Express.js + Node.js
+Database: MongoDB (for housing data storage)
+ML Integration: FastAPI (Python) or Flask for serving ML models
+API Requests: Axios for fetching ML predictions
+Mobile App (React Native + ML Integration):
+Framework: React Native (for cross-platform support)
+State Management: Redux or Context API
+Backend: Same Node.js API as the web app
+ML Integration: Call ML API via REST from FastAPI
+ML Model (For Price Prediction):
+Model Type: Regression-based ML model (e.g., XGBoost, Random Forest, or Deep Learning using TensorFlow/PyTorch)
+Dataset: Kaggle housing datasets or scraped real estate data
+Deployment: FastAPI + Docker (for scalability)
+
+3. GitHub Collaboration Strategy:
+Monorepo vs. Separate Repos: Use a monorepo (one GitHub repo) with different directories for web, mobile, and ML.
+Branching Strategy:
+main → Stable production-ready code
+dev → Active development
+Feature branches (feature/web-ui, feature/ml-model) for independent tasks
+CI/CD: GitHub Actions for automated testing and deployment
+API Documentation: Use Postman or Swagger for backend endpoints
+Regular Syncs: Weekly stand-up calls & code reviews via PRs
+Would you like specific guidance on setting up the ML model or GitHub workflow?
