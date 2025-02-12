@@ -65,3 +65,30 @@ CI/CD: GitHub Actions for automated testing and deployment
 API Documentation: Use Postman or Swagger for backend endpoints
 Regular Syncs: Weekly stand-up calls & code reviews via PRs
 Would you like specific guidance on setting up the ML model or GitHub workflow?
+
+You said:
+noted this, but how will we keep the UI same in web and mobile app as both of us are using diff laptops and connect with each other only through Gmeet
+
+ChatGPT said:
+ChatGPT
+To keep the UI consistent across the web and mobile apps, follow these strategies:
+
+1. Common UI Design System:
+Use Figma or Adobe XD for collaborative UI design.
+Create reusable design components (buttons, cards, typography).
+Define a color palette, font styles, and spacing guidelines.
+
+2. Shared Component Library:
+Store reusable UI components in a shared GitHub repository.
+Web (React.js) and Mobile (React Native) can both use Tailwind CSS-like styles (e.g., NativeWind for React Native).
+Use Storybook (for web) and React Native Storybook (for mobile) to preview UI components.
+
+3. Code Synchronization:
+Maintain a separate UI-Components folder in the monorepo.
+Use GitHub pull requests to review each other’s UI changes.
+Regularly test UI changes on both platforms before merging.
+
+4. API-Driven UI Updates:
+Fetch UI configurations (like theme, layout settings) from an API.
+This ensures changes are reflected on both platforms dynamically.
+Would you like help setting up a starter UI template for both web and mobile?
