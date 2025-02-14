@@ -16,10 +16,17 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path,include
+from django.http import HttpResponse
+
+def home(request):
+    return HttpResponse("<h1>Welcome to SmartHood Backend</h1>")
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('api/', include('api.urls')),  # Include API URLs
+    path('', home),  # This makes the root URL return a response
 ]
+
+
 
 
