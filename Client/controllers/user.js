@@ -22,11 +22,15 @@ async function handleUserLogin(req, res) {
 
   try {
     const user = await User.findOne({ email });
-    if (!user || user.password !== password) {
+    if (!user) {
       return res.status(401).send({ msg: "Invalid email or password" });
     }
 
-    res.render("dashboard"); // Replace with the actual page after login
+    if (user.password !== password) {  // Incorrect password check
+      return res.status(401).send({ msg: "Invalid email or password" });
+    }
+
+    return res.render("dashboard");
   } catch (err) {
     console.error("Login Error:", err);
     return res.status(500).send({ msg: "Internal server error" });
