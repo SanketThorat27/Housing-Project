@@ -12,13 +12,14 @@ app.use(express.urlencoded({ extended: true }));
 app.set("view engine", "ejs");
 app.set("views", path.resolve("./views"));
 
-
 (async () => {
-    try{
-
-        await connectMongoDB("mongodb://localhost:27017/Housing-userData");
-        app.use("/", userRouter);
-        app.listen(PORT, () => console.log(`Server Started at PORT:${PORT}`));
-    }catch(err)
-    {console.error("Error",err)}
+  try {
+    await connectMongoDB(
+      "mongodb+srv://sanketthorat27:Gqyyp9ZnfAPrvu8G@cluster0.adliz.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0"
+    );
+    app.use("/", userRouter);
+    app.listen(PORT, () => console.log(`Server Started at PORT:${PORT}`));
+  } catch (err) {
+    console.error("Error", err);
+  }
 })();
