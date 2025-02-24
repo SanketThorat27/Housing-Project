@@ -1,47 +1,56 @@
-import React, { useState } from "react";
-import axios from "axios";
-import "./HomePage.css"
+import React from "react";
+import "./HomePage.css";
+import housing1 from "../images/housing1.png";
+import logo from "../images/logo.png";
+import housing2 from "../images/housing2.png";
+import housing3 from "../images/housing3.png";
 
 const HomePage = () => {
-  const [formData, setFormData] = useState({
-    size: "",
-    bedrooms: "",
-    location: "",
-  });
-
-  const [predictedPrice, setPredictedPrice] = useState(null);
-
-  const handleChange = (e) => {
-    setFormData({ ...formData, [e.target.name]: e.target.value });
-  };
-
-  const handleSubmit = async (e) => {
-    e.preventDefault();
-    try {
-      const response = await axios.post("http://localhost:5000/predict", formData);
-      setPredictedPrice(response.data.predicted_price);
-    } catch (error) {
-      console.error("Error fetching prediction:", error);
-    }
-  };
-
   return (
-    <div className="container">
-      <h2>Housing Price Prediction</h2>
-      <form onSubmit={handleSubmit} className="form">
-        <label>Size (sq ft):</label>
-        <input type="number" name="size" value={formData.size} onChange={handleChange} required />
+    <div className="homepage-container">
+      {/* Navigation Bar */}
+      <header className="header">
+        <div className="wrapper">
+          <div className="logo">
+            <img src={logo} alt="Logo" className="logo-img" />
+          </div>
+          <nav>
+            <ul className="nav-area">
+              <li><a href="#">Home</a></li>
+              <li><a href="#">About Us</a></li>
+              <li><a href="#">Predict Price</a></li>
+              <li><a href="#">Redirect</a></li>
+              <li><a href="#">Ketan | Sanket</a></li>
+            </ul>
+          </nav>
+        </div>
 
-        <label>Bedrooms:</label>
-        <input type="number" name="bedrooms" value={formData.bedrooms} onChange={handleChange} required />
+        {/* Welcome Text */}
+        <div className="welcome-text">
+          <h1>We are <span>Creative</span></h1>
+          <a href="#" className="contact-btn">Contact Us</a>
+        </div>
+      </header>
 
-        <label>Location:</label>
-        <input type="text" name="location" value={formData.location} onChange={handleChange} required />
+      {/* Banner Image */}
+      <div className="banner">
+        <img src={housing1} alt="Banner" className="banner-img" />
+      </div>
 
-        <button type="submit">Predict Price</button>
-      </form>
+      {/* Feature Section */}
+      <div className="feature-section">
+        <img src={housing2} alt="Feature" className="feature-img" />
+      </div>
 
-      {predictedPrice && <h3>Estimated Price: ${predictedPrice}</h3>}
+      {/* Extra Image Section */}
+      <div className="extra-image">
+        <img src={housing3} alt="Extra" className="extra-img" />
+      </div>
+
+      {/* Footer */}
+      <footer className="footer">
+        <p>&copy; California Housing Project. All Rights Reserved.</p>
+      </footer>
     </div>
   );
 };
