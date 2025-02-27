@@ -1,0 +1,74 @@
+/* ContactUs.css */
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: linear-gradient(135deg, #ff9a9e, #fad0c4, #fad0c4, #ffdde1);
+  }
+  
+  .form-container {
+    background: white;
+    padding: 30px;
+    width: 400px;
+    border-radius: 12px;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
+    text-align: center;
+  }
+  
+  .title {
+    font-size: 26px;
+    font-weight: bold;
+    color: hsl(342, 84%, 40%);
+    margin-bottom: 10px;
+  }
+  
+  .subtitle {
+    font-size: 16px;
+    color: #555;
+    margin-bottom: 20px;
+  }
+  
+  .form {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .input, .textarea {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 15px;
+    border: 2px solid #ff80ab;
+    border-radius: 8px;
+    font-size: 14px;
+    transition: all 0.3s ease;
+  }
+  
+  .input:focus, .textarea:focus {
+    border-color: #ff477e;
+    outline: none;
+    box-shadow: 0 0 8px rgba(255, 71, 126, 0.3);
+  }
+  
+  .textarea {
+    resize: none;
+  }
+  
+  .button {
+    background: linear-gradient(135deg, #ff477e, #ff80ab);
+    color: white;
+    padding: 12px;
+    font-size: 18px;
+    font-weight: bold;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.2s;
+  }
+  
+  .button:hover {
+    background: linear-gradient(135deg, #ff80ab, #ff477e);
+    transform: scale(1.05);
+  }
+  
