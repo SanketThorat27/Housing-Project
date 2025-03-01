@@ -5,17 +5,35 @@ const ContactUs = () => {
   return (
     <div className="container">
       <div className="form-container">
-        <h2 className="title">Get in Touch</h2>
-        <p className="subtitle">Have any questions? We'd love to hear from you.</p>
-        <form className="form">
-          <div className="input-group">
-            <input type="text" placeholder="Name" className="input" />
-            <input type="email" placeholder="Email" className="input" />
-            <input type="tel" placeholder="Phone Number" className="input" />
+        <div className="left-container">
+          <div className="left-inner-container">
+            <h2>Let's Connect</h2>
+            <p>Whether you have a question, want to suggest us something or simply want to connect.</p>
+            <br />
+            <p>Feel free to send me a message in the contact form</p>
           </div>
-          <textarea placeholder="Message" rows="4" className="textarea"></textarea>
-          <button type="submit" className="button">Send Message</button>
-        </form>
+        </div>
+        <div className="right-container">
+          <div className="right-inner-container">
+            <form action="#">
+              <h2 className="lg-view">Contact</h2>
+              <h2 className="sm-view">Let's Chat</h2>
+              <p></p>
+              <div className="social-container">
+                <a href="#" className="social"><i className="fab fa-facebook-f"></i></a>
+                <a href="#" className="social"><i className="fab fa-google-plus-g"></i></a>
+                <a href="#" className="social"><i className="fab fa-linkedin-in"></i></a>
+              </div>
+              <input type="text" placeholder="Name *" required />
+              <input type="email" placeholder="Email *" required />
+              <input type="text" placeholder="Message " required />
+              
+             
+             
+              <button type="submit">Submit</button>
+            </form>
+          </div>
+        </div>
       </div>
     </div>
   );
