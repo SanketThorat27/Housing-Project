@@ -24,16 +24,16 @@ const HomePage = () => {
           </div>
           <nav>
             <ul className="nav-area">
-              <li>
-                <a href="#">Home</a>
-              </li>
+             
               <li>
                 <Link to="/Predictprice">
                 <a href="#">Predict Price</a>
                 </Link>
               </li>
               <li>
-                <a href="#">Redirect</a>
+                <Link to="/CurrencyConverter">
+                <a href="#">Currency Converter</a>
+                </Link>
               </li>
               <li>
                 {" "}

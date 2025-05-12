@@ -1,0 +1,86 @@
+/* General Styles */
+*{
+    font-size: 20px;
+}
+body {
+    background-color: #f3f4f6;
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+  }
+  .homebtn{
+    margin-left: 532px;
+  }
+  /* Container */
+  .converter-container {
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    width: 400px;
+    text-align: center;
+  }
+  .title{
+    margin-top: 30px ;
+    margin-left: 315px;
+  }
+  
+  .result{
+    margin-top: 30px;
+    font-weight: bold;
+    
+  }
+  /* Headings */
+  h1 {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 20px;
+  }
+  
+  /* Input and Select Fields */
+  .input-group {
+    margin-bottom: 15px;
+    text-align: left;
+    
+  }
+  
+  .input-group label {
+    font-weight: bold;
+    display: block;
+    margin-bottom: 5px;
+  }
+  
+  .input-group input,
+  .input-group select {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  /* Convert Button */
+  .convert-btn {
+    width: 100%;
+    background-color: #007bff;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+  }
+  
+  .convert-btn:hover {
+    background-color: #0056b3;
+  }
+  
+  /* Converted Amount */
+  .converted-result {
+    margin-top: 15px;
+    font-size: 18px;
+    font-weight: bold;
+  }
+  

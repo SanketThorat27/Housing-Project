@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 
 const PredictPrice = () => {
+  const [output,setOutput]=useState(false)
   const [formData, setFormData] = useState({
     location: "",
     rooms: "",
@@ -40,6 +41,11 @@ const PredictPrice = () => {
           Area of House (sq ft):
           <input type="number" name="area" value={formData.area} onChange={handleChange} className="w-full p-2 border rounded mt-1" required />
         </label>
+        {output && <label className="block mb-2">
+          Output:
+          <input type="text" name="location" value={formData.location} onChange={handleChange} className="w-full p-2 border rounded mt-1" required />
+        </label>}
+
 
         <button type="submit" className="w-full bg-blue-500 text-white py-2 rounded hover:bg-blue-600">Submit</button>
       </form>
