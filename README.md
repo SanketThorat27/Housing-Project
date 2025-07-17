@@ -1,4 +1,4 @@
-# Housing-Project
+# EstateFinder
 1.Project name - SmartHood
 2. Tech stack - MERN stack + ML(python) {Web Dev}
 3. Tech stack - React-native + ML(python) {Mob app} 
